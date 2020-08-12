@@ -1,7 +1,7 @@
 # Compare elements using Python and TwitterSearch API
 TwitterSearch allows us to search within Twitter data. The solution compares two elements and generates a percentage graph as HTML output.
  
-$ Create TwitterSearch App
+# Create TwitterSearch App
 Go to apps.twitter.com
 Login
 Click on ‘ Create New App ’ button
