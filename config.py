@@ -1,0 +1,4 @@
+config = {
+    'APP_KEY': 'CONSUMER_KEY_HERE',
+    'APP_SECRET': 'CONSUMER_SECRET_KEY_HERE'
+    }

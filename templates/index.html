@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="progress" style="height:50px">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width:{{ data['percent1'] }}">
+                            {{ data['key1'] }} {{ data['percent1'] }}
+                    </div>
+                    <div class="progress-bar" role="progressbar" style="width:{{ data['percent2'] }}">
+                            {{ data['key2'] }} {{ data['percent2'] }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 mt-3">
+                <div class="card">
+                    <div class="card-header"><h1 class="text-center">{{ data['key1'] }}</h1></div>
+                    <div class="card-body">
+
+                        <h3>
+                            {{ data['percent1'] }}
+                        </h3>
+                        
+                        {% for imgUrl in data['profile1'] %} 
+                            <img class="img-responsive" src="{{imgUrl}}" alt=" ">
+                        {% endfor %}
+                          
+
+                    </div>
+                    <div class="card-footer"> </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 mt-3">
+                <div class="card">
+                    <div class="card-header"><h1 class="text-center">{{data['key2']}}</h1></div>
+                    <div class="card-body">
+                        <h3>
+                            {{data['percent2']}}
+                        </h3>
+                          
+                        {% for imgUrl in data['profile2'] %} 
+                            <img class="img-responsive" src="{{imgUrl}}" alt=" ">
+                        {% endfor %}
+
+                    </div>
+                    <div class="card-footer"> </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
